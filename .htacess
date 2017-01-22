@@ -6,6 +6,9 @@ RewriteEngine on
 RewriteCond $1 !^(index\.php|pando|upload|assets|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
 
+rewritecond %{http_host} ^laroux.com.br [NC]
+RewriteRule ^(.*)$ http://www.laroux.com.br/$1 [r=301,NC]
+
 RewriteRule ^adminrz2 - [L,NC]
 RewriteRule ^public - [L,NC]
 RewriteRule ^pando - [L,NC]
