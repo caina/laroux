@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Swis721 Lt BT';
+	src: url('Swiss721BT-Light.eot');
+	src: url('Swiss721BT-Light.eot?#iefix') format('embedded-opentype'),
+		url('Swiss721BT-Light.woff') format('woff'),
+		url('Swiss721BT-Light.ttf') format('truetype'),
+		url('Swiss721BT-Light.svg#Swiss721BT-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}

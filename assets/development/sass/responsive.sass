@@ -1,0 +1,747 @@
+.mainArticle
+	header
+		h1
+			font-size: 4.8em
+@media only screen and (max-width: 1700px)
+	#mediaContainer
+		.brush-up-arrow
+			bottom: 0
+			right: -40px
+	.formConsulta
+		float: right
+		max-width: calc(100% - 439px)
+		padding-left: 80px
+		.label-cnt-form
+			label
+				input,
+				select
+					max-width: 90%
+@media only screen and (max-width: 1500px)
+	#problema
+		.mainArticle
+			padding-left: 100px
+			padding-top: 100px
+			header
+				&:before
+					bottom: 6px
+					left: 0
+			.duvidasCnt
+				margin-left: 0
+		
+	.innerMedia
+	
+	#marcarConsulta
+		.txtLeft
+			width: 285px
+			h2
+				font-size: 2.3em
+			p
+				font-size: 1.2em
+	.formConsulta
+		max-width: calc(100% - 332px)
+		.label-cnt-form
+			label
+				input,
+				select
+					max-width: 85%
+					margin-top: 15px
+					margin-bottom: 15px
+	.mainArticle
+		header
+			h1
+				font-size: 4em
+
+		.duvidasCnt
+			h3
+				font-size: 1.5em
+			h2
+				font-size: 2em
+	h2
+		font-size: 2em
+	.lkMais
+		background-size: 30px auto !important
+		font-size: 1em
+		padding-right: 35px !important
+	#linksDestaques
+		.itemDestHome
+			height: 410px
+		h2
+			font-size: 2.9em
+		span
+			font-size: 1.3em
+	
+	.box-news
+		margin-left: 0
+	#footer
+		h4
+			font-size: 2.3em
+		.bottomLine
+			font-size: 1em
+			padding: 20px 40px
+			width: auto
+			max-width: 100%
+	.tratIndicados
+		ul
+			li
+				img
+					height: auto
+					width: 100%
+		.titleBox
+			span
+				font-size: 1.4em
+@media only screen and (max-width: 1300px)
+	.containerNav
+		.mainNav
+			text-align: right
+			padding-right: 180px
+	#header
+		&.capaSite
+			&.active
+				#logo-site
+					h1
+						img
+							width: 200px
+	.titleBox
+		span
+			font-size: 1.2em
+@media only screen and (max-width: 1024px)
+	.grid-sizer
+		width: 33.33333%
+	.grid-item
+		width: 33.33333%
+	#footer
+		.c50p
+			width: 100%
+		.tal
+			text-align: center
+	.mainArticle
+		.mainTxt
+			padding-left: 120px
+	#marcarConsulta
+		padding: 0
+		text-align: center
+		.txtLeft
+			float: none
+			max-width: 100%
+			text-align: center
+			padding: 20px
+			width: calc(100% - 40px)
+			color: #fff
+			p
+				display: none
+		.txtAlter
+			display: block
+		.formConsulta
+			width: 100%
+			max-width: 100%
+			padding: 0
+			border: none
+			text-align: center
+			.label-cnt-form
+				width: 100%
+				padding: 0 20px
+				max-width: calc(100% - 40px)
+				label
+					input,
+					select
+						width: 100%
+						margin: 10px
+						max-width: calc(100% - 20px)
+			.bt-cnt-submit
+				float: none
+				display: block
+				border: none
+				width: 100%
+				position: relative
+				text-align: center
+				transform: none
+				height: auto
+				margin-top: 0
+				height: 90px
+				input
+					border: 1px dashed #fff !important
+					font-size: 2em
+					width: 390px
+					padding: 20px !important
+					max-width: calc(100% - 40px)
+					background-size: auto
+					margin: 0
+					height: auto
+					float: none
+					background: none
+					z-index: 1
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%,-50%)
+					color: #fff
+					&:hover
+						color: #fff
+				&:after
+					position: absolute
+					top: 50%
+					left: calc(50% + 110px)
+					transform: translate(-50%,-50%)
+					width: 40px
+					height: 40px
+					z-index: 0
+					content: " "
+					background: url("../img/button-left-white.png") center
+	#header
+		&.active
+			.containerNav
+				left: 0%
+				top: 110px
+				width: 280px
+				max-width: 70%
+				height: 100%
+				overflow: auto
+	.containerNav
+		.mainNav
+			text-align: left
+			padding: 49px 0 10px
+			li
+				margin: 0
+				width: 100%
+				position: relative
+				border-bottom: 1px solid #9c9c9e
+				a
+					padding: 10px 20px
+					display: block
+					max-width: 100%
+					&:hover
+						color: $vermelho
+				.closeCntUls
+					display: block
+				.containerUls
+					transition: 0.2s ease
+					top: 0
+					text-align: left
+					left: -100%
+					background: #ebebeb
+					position: absolute
+					padding: 0
+					width: 250px
+					width: 100%
+					max-width: 100%
+				&.active
+					a:after
+						display: none
+					.containerUls
+						position: relative
+						left: 0%
+						top: 0
+						ul
+							display: block
+					.closeCntUls
+						background: #ebebeb
+						&:after
+							height: 2px
+					li
+						border-bottom: 1px solid #fff
+						border-top: none
+				&:last-child
+					border-bottom: none
+	#closeNav,
+	#openNav
+		&.noBg
+			background: none !important
+			&.active
+				left: 0
+				transform: translateX(0)
+				top: 110px
+	#openNav
+		&.active
+			width: 250px
+			max-width: calc(70% - 30px)
+			background: $vermelho !important
+			text-align: right
+			left: 0
+			transform: none
+			top: 110px
+			color: #000 !important
+			div
+				left: -30px
+				background: #000 !important
+				&:after,
+				&:before
+					background: #000 !important
+	.containerNav
+		top: 110px
+		left: -100%
+		max-height: calc(100% - 110px)
+		background: #fff
+	
+	.titleBox
+		animation: show-in-translateY 4s ease
+		transform: translateY(0)
+		padding: 20px 10px
+		max-width: calc(100% - 20px)
+		span
+			font-size: 1.3em
+			margin: 0 0 11px
+			line-height: 1em
+@media only screen and (min-width: 600px) and (max-width: 1024px)
+	.tratIndicados
+		ul
+			li
+				width: calc(33% - 10px)
+				padding: 0 5px
+				&:neth-child(3n+1)
+					clear: both
+				img
+					height: auto
+@media only screen and (min-width: 1023px) and (max-width: 1250px)
+	.mainArticle header h1
+		font-size: 3em
+@media only screen and (max-width: 1023px)
+	#article
+		h2
+			font-size: 3em
+		.innerMedia
+			width: 100%
+	#problema
+		.bkLink
+			display: none
+		#mediaContainer
+			.mediaImage
+				width: 100%
+				max-width: calc(100% - 140px)
+				&:after
+					width: calc(100% - 35px)
+				img
+					width: 100%
+					max-width: 100%
+		.mainArticle
+			display: inline-block
+			padding-left: 20px
+			padding-top: 50px
+			padding-right: 20px
+			.mainTxt
+				p
+					padding-left: 110px
+			&:before
+				display: none
+			.duvidasCnt
+				margin-left: 0
+				p
+					padding-left: 0
+				ul
+					li
+						width: 100%
+			header
+				&:before
+					bottom: -14px
+				h1
+					max-width: calc(100% - 40px)
+					&:after
+						transform: translate(0,50%)
+	#tratamento,
+		position: relative
+		display: inline-block
+		float: left
+		width: 100%
+		.bkLink
+			position: absolute
+		.mainArticle
+			padding-left: 20px
+			padding-right: 20px
+			header
+				&:before
+					left: 0
+			.mainTxt
+				&:before
+					display: none
+			.duvidasCnt
+				p
+					padding-left: 0
+				ul
+					li
+						width: 100%
+		#mediaContainer
+			padding: 37px 20px 73px 90px
+			.skewLine
+				bottom: 40px
+		.relacionados
+			margin: 0 40px
+			max-width: 100%
+	.duvidasCnt
+		h2
+			font-size: 3em
+	.HideMobile
+		display: none
+	.ShowMobile
+		display: block
+
+	body.popUpTrue #mediaPopUp
+		width: 100%
+		z-index: 99
+		padding-top: 0
+		top: 0
+		left: 0
+		transform: none
+		.formConsulta
+			width: 100%
+			max-width: 100%
+			padding: 0
+			border: none
+			text-align: center
+			.label-cnt-form
+				width: 100%
+				padding: 0 20px
+				max-width: calc(100% - 40px)
+				label
+					input,
+					select
+						width: 100%
+						margin: 10px
+						max-width: calc(100% - 20px)
+			.bt-cnt-submit
+				float: none
+				display: block
+				border: none
+				width: 100%
+				position: relative
+				text-align: center
+				height: auto
+				margin-top: 0
+				height: 90px
+				input
+					border: 1px dashed #fff !important
+					font-size: 2em
+					width: 390px
+					padding: 0 !important
+					max-width: calc(100% - 40px)
+					background-size: auto
+					margin: 0
+					height: 90px
+					float: none
+					background: none
+					z-index: 1
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%,-50%)
+					color: #fff
+					&:hover
+						color: #fff
+				&:after
+					position: absolute
+					top: 50%
+					left: calc(50% + 110px)
+					transform: translate(-50%,-50%)
+					width: 40px
+					height: 40px
+					z-index: 0
+					content: " "
+					background: url("../img/button-left-white.png") center
+
+@media only screen and (max-width: 767px)
+	#closeNav,
+	#openNav
+		right: 0
+		&.noBg
+			top: 115px
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+		div
+			width: 30px
+			height: 3px
+			&:before,
+			&:after
+				width: 30px
+				height: 3px
+			&:after
+				top: 8px
+			&:before
+				top: -8px
+	.capaSite
+		padding: 56px 0 0 0
+		height: 60px
+		text-align: center
+		#logo-site
+			margin: 0 auto !important
+			display: inline-block
+			text-align: center
+			img
+				width: 180px
+	#marcarConsulta,
+	body.popUpTrue #mediaPopUp
+		.formConsulta
+			label,
+			.cntForm
+				width: 100%
+				input,
+				select
+					line-height: 55px
+					height: 55px
+					font-size: 1.2em
+			.label-cnt-form
+				max-width: calc(100% - 20px)
+				padding: 0 10px
+			.bt-cnt-submit
+				input
+					line-height: 22px
+					font-size: 22px
+					height: 60px
+				&:after
+					background-repeat: no-repeat
+					width: 42px
+		.txtLeft
+			h2
+				font-size: 2em
+		.formPopContainer
+			padding: 0 0 60px
+			h2
+				font-size: 2em
+		.mediaPopUp
+			h2
+				font-size: 2em
+
+
+	#linksDestaques
+		span
+			margin-left: 0
+			margin-bottom: 20px
+		.itemDestHome
+			display: none
+			width: 100%
+			height: auto
+			padding-bottom: 15px
+			animation: toggle-left 1s ease-in-out
+			&.current
+				display: block
+			&.current,
+			&:hover
+				&:after
+					top: auto !important
+					bottom: 15px !important
+					right: 0 !important
+					animation: none !important
+					width: calc(100% - 50px) !important
+					height: 70px !important
+					display: none
+			.centerFix
+				left: auto
+				transform: none
+				max-width: 100%
+				padding-top: 0
+				margin: 0 20px 0 50px
+		.lkMais
+			bottom: 0px
+			float: right
+			right: -20px
+			position: relative
+			width: calc(100% - 43px)
+			text-align: right
+			height: 70px
+			line-height: 70px
+			animation: show-in-txt-bt 0.8s ease
+			padding-right: 62px !important
+			background-position: calc(100% - 20px) center
+			background-color: rgba(242, 60, 63, 0.8)
+			font-size: 1.1em
+			&:hover
+				color: #fff
+	.grid
+		width: 100%
+	.grid-item,
+	.grid-sizer
+		width: 100%
+	#header
+		&.insidePage
+			padding: 16px 0 9px !important
+			#logo-site
+				margin-left: 20px
+				h1
+					img
+						width: 100px
+	#openNav.insidePage
+		top: 14px
+		&.active
+			top: 110px
+
+
+@media only screen and (max-width: 600px)
+	#problema,
+	#tratamento
+		#mediaContainer
+			padding-bottom: 20px
+			.mediaImage
+				padding: 10px 0 10px 10px
+				max-width: calc(100% - 30px)
+				&:before
+					width: 30%
+					right: 15px
+				&:after
+					height: calc(100% - 83px)
+					max-width: calc(100% - 9px)
+				span
+					background-position: center top
+					background-size: 50px
+					padding-top: 60px
+					font-size: 1.1em
+					white-space: nowrap
+		.mainArticle
+			header
+				&:before
+					width: 60px
+				h1
+					min-height: 0
+					margin: 10px 0 15px
+					font-size: 3em
+			.mainTxt
+				padding-left: 0
+				p
+					padding-left: 70px
+			.duvidasCnt
+				margin-left: 0
+				ul
+					li
+						.respostaInt
+							width: 100%
+							max-width: 100%
+							p
+								padding: 0
+	#marcarConsulta
+		padding-bottom: 10px
+	#tratamento
+		#mediaContainer
+			padding: 55px 0 73px 10px
+	.tratIndicados
+		ul
+			li
+				float: left
+				width: calc(50% - 10px)
+				padding: 0 5px
+				&:nth-child(2n+1)
+					clear: both
+				img
+					height: auto
+	.relatedItem
+		img
+			width: 100% !important
+			margin: 0
+		div
+			span
+				font-size: 1em
+
+	.brush-up-arrow
+		display: none
+	.respostaInt
+		width: 100%
+		max-width: 100%
+	#linksDestaques
+		.itemDestHome
+			h2
+				line-height: 1.1em
+	#footer
+		border-top: 30px solid #f1f3f5
+		.box-news,
+		.box-sigaNos
+			margin: 30px 0 10px
+			width: 100%
+			h4
+				font-size: 1.8em
+				margin-bottom: 10px
+			img
+				max-width: 30px
+				max-height: 40px
+			form
+				margin: 20px 10px 10px
+				max-width: calc(100% - 20px)
+				input,
+				select
+					max-width: calc(100% - 66px)
+					float: left
+					font-size: 1.4em
+					height: 52px
+					line-height: 52px
+					text-indent: 10px
+					&[type="submit"]
+						height: 54px
+			a
+				span
+					bottom: -11px
+		p
+			font-size: 1em
+			margin: 5px 20px
+		.tar.signature
+			margin-bottom: 20px
+			text-align: center
+
+		a
+			padding: 5px
+			margin: 5px
+@media only screen and (max-height: 640px)
+	#mediaPopUp .closePopUp
+		position: fixed
+@media only screen and (max-height: 480px)
+	#linksDestaques
+		padding-top: 10px
+		h2
+			font-size: 2.1em
+		.itemDestHome
+			&.current,
+			&:hover
+				padding-bottom: 0
+				&:after
+					height: 50px
+					bottom: 0px
+			.lkMais
+				bottom: 0
+				height: 50px !important
+				line-height: 50px !important
+
+	#header
+		&.capaSite
+			padding: 14px 0 27px
+	#openNav
+		&.noBg
+			top: 80px
+	#backgroundSlider
+		&:after
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(#fff,0.4)
+@media only screen and (max-width: 460px)
+	.relacionados
+		.relatedItem
+			width: 100%
+			clear: both
+			margin-bottom: 15px
+			img
+				width: 100%
+			.lkMais
+				display: none
+	.tratIndicados
+		ul
+			li
+				width: calc(100% - 20px)
+				padding: 0 10px
+				clear: both
+				img
+					height: auto
+					width: 100%
+	#article,
+	.duvidasCnt
+		h2
+			font-size: 1.5em
+		h3
+			font-size: 1.2em
+		.mainArticle
+			padding-bottom: 0
+			header
+				h1
+					font-size: 10vw
+					span
+						font-size: 0.8em
+			.mainTxt
+				p
+					font-size: 0.9em
+					line-height: 1.4em
+					font-family: $lightCond
