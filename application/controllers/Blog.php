@@ -12,6 +12,7 @@ class Blog extends MY_Controller {
 	public function index($page = 0) {
 		$this->data["posts"] = $this->blog_model->getPerPage($page);
 
+		// $this->loadView("blog_list");
 		$this->loadBlogView("listagem");
 	}
 	
