@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container blog">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<div class="post_list">
 				<?php foreach ($posts->list as $post): ?>
 
-				<h2 class="title bottom top-2">
+				<h2>
 					<a href="<?php echo $post->getLink() ?>">
 						<?php echo $post->title ?>
 					</a> 
@@ -12,7 +12,7 @@
 
 				<div class="image-post bottom left"> 
 					<a href="<?php echo $post->getLink() ?>">
-						<img src="<?php echo $post->getImage() ?>" max-width="330px">
+						<img src="<?php echo $post->getImage() ?>" class="img-fluid">
 					</a>  
 				</div>
 
@@ -25,31 +25,16 @@
 			</div>
 		</div>
 
-		<div class="col-md-4">
-			<div class="row">
-				<div class="col-md-12">
-					<form action="<?php echo site_url("blog/pesquisa") ?>" method="GET">
-				       <input name="search" type="text" class="search" value="Search in blog" onBlur="if(this.value == '') { this.value = 'Pesquisar'; }" 
-				       onfocus="if(this.value == 'Pesquisar') { this.value = ''; }" />
-				       <input type="submit" value="" class="submit-search" />
-				     </form>
-				</div>				
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="title bottom-2">
-						Categorias <span class="line"></span>
-					</h2>
-					<ul class="square-list categories bottom">
-						<?php foreach ($categorias->list as $categoria): ?>
-							<li>
-								<a href="<?php echo $categoria->getLink() ?>"><?php echo $categoria->title; ?></a>
-							</li>
-						<?php endforeach ?>      
-					</ul>
-				</div>				
-			</div>
+		<div class="col-md-5">
+			<?php echo $sidebar ?>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<?php echo $posts->getMagicPagination($current_page) ?>
 
 		</div>
 	</div>

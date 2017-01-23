@@ -5,26 +5,32 @@ class Blog extends MY_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('Blog_Model', 'blog_model');
-
 		$this->data["categorias"] = $this->blog_model->getCategories();
+		$this->data["sidebar"] = $this->load->view('blog_sidebar', $this->data, TRUE);
+		$this->data["current_page"] = 0;
 	}
 
-	public function index($page = 0) {
+	function index($page = 0) {
 		$this->data["posts"] = $this->blog_model->getPerPage($page);
 
-		// $this->loadView("blog_list");
-		$this->loadBlogView("listagem");
+		$this->data["current_page"] = $page;
+		$this->loadView("blog_list");
 	}
 	
 	function categoria($id) {
 		$this->data["posts"] = $this->blog_model->getByCategory($id);
-		$this->loadBlogView("listagem");
+		$this->loadView("blog_list");
 	}
 
 	function pesquisa() {
 		$term = $this->input->get_post('search', TRUE);
 		$this->data["posts"] = $this->blog_model->search($term);
-		$this->loadBlogView("listagem");
+
+		if(empty($this->data["posts"]->list)) {
+			redirect('blog/','refresh');
+		}
+		
+		$this->loadView("blog_list");
 	}
 
 	function detalhe($slug_or_id) {
@@ -35,7 +41,7 @@ class Blog extends MY_Controller {
 			exit;
 		}
 
-		$this->loadBlogView("detalhe");	
+		$this->loadView("blog_post");
 	}
 
 

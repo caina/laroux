@@ -1,1 +1,62 @@
+.blog h2,h1 {
+	margin: 0px;
+}
+.blog h2 a {
+
+	font-family: "Playfair Display", serif;
+	font-weight: 900;
+	font-size: 0.8em;
+	display: inline-block;
+	min-height: 124px;
+	line-height: 1.1em;
+	transition: all .1s ease-out;
+	color: #ad3335;
+	text-decoration: none;
+	border-bottom: 1px solid #ececec;
+} 
+.blog p {
+	font-family: "Swis721 Lt BT";
+}
+.blog li {
+	background: url(../blog/images/icons/list-icons/square.png) no-repeat;
+    padding: 5px 5px 5px 15px;
+    line-height: 20px;
+    background-position: 0 50%;
+    list-style: none;
+}
+.blog li:hover {
+	padding-left: 18px;
+    background-position: 1% 50%;
+}
+.blog li a {
+	color: #333;
+	transition: all .1s ease-out;
+}
+.blog li a: hover {
+	color: #23527c !important;
+}
+.blog h2 a:hover {
+	color: #e6393b;	
+	text-decoration: none;
+}
+.blog h1 {
+	font-family: "Playfair Display", serif;
+	font-weight: 900;
+	font-size: 3.2em;
+	display: inline-block;
+	min-height: 124px;
+	transition: all .1s ease-out;
+	color: #ad3335;
+	text-decoration: none;
+	border-bottom: 1px solid #ececec;
+}
+.blog .title {
+	font-family: "Swis721 Lt BT";
+    color: #333;
+    border-bottom: 1px solid #ececec;
+    margin: 0px 0px 0px 40px;
+}
+.blog form {
+	margin-left: 40px;
+}
 
