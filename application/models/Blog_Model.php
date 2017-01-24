@@ -27,11 +27,13 @@ class Blog_Model extends CI_Model {
 		return $this->dataPopulate($posts);
 	}
 
-	function getByCategory($id) {
+	function getByCategory($categoria) {
 		$posts = $this->db->
+			select("blog_post.*")->
 			from("blog_post")->
 			join("blog_post_category","blog_post_category.id_blog_post = blog_post.id")->
-			where("blog_post_category.id_blog_category",$id)->
+			join("blog_category","blog_post_category.id_blog_category = blog_category.id")->
+			where("blog_category.title like","%".str_replace(" ", "%",$categoria)."%" )->
 			order_by("blog_post.id", "DESC")->get()->result();
 		return $this->dataPopulate($posts);
 	}
@@ -134,7 +136,11 @@ class BlogDto extends Dto {
 
 class PostCategoryDto extends Dto {
 
-	var $PATH = "blog/categoria";
+	var $PATH = "blog/categoria/";
+
+	function getLink(){
+		return site_url($this->PATH.url_title(convert_accented_characters($this->title)));
+	}
 }
 
 /* End of file  */

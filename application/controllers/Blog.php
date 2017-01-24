@@ -17,8 +17,8 @@ class Blog extends MY_Controller {
 		$this->loadView("blog_list");
 	}
 	
-	function categoria($id) {
-		$this->data["posts"] = $this->blog_model->getByCategory($id);
+	function categoria($categoria) {
+		$this->data["posts"] = $this->blog_model->getByCategory($categoria);
 		$this->loadView("blog_list");
 	}
 
@@ -29,7 +29,7 @@ class Blog extends MY_Controller {
 		if(empty($this->data["posts"]->list)) {
 			redirect('blog/','refresh');
 		}
-		
+
 		$this->loadView("blog_list");
 	}
 
