@@ -25,14 +25,14 @@
     list-style: none;
 }
 .blog li:hover {
-	padding-left: 18px;
+	padding-left: 18px; 
     background-position: 1% 50%;
 }
 .blog li a {
 	color: #333;
 	transition: all .1s ease-out;
 }
-.blog li a: hover {
+.blog li a:hover {
 	color: #23527c !important;
 }
 .blog h2 a:hover {

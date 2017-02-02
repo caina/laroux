@@ -8,11 +8,15 @@ class Blog_Model extends CI_Model {
 
 	function getPerPage($page) {
 		$dto = new BlogDto();
-		$posts = $this->db->
-			from("blog_post")->
-			limit($dto->ITENS_PAGE, $page)->
-			order_by("id", "DESC")->get()->result();
-
+		$itens_per_page = $dto->ITENS_PAGE;
+		$page = $page * $itens_per_page;
+		$posts = $this->db->query("select * from blog_post order by id DESC limit {$page}, {$itens_per_page}  ")->result();
+		// $this->db->from("blog_post");
+		// $this->db->limit(, );
+		// $posts = $this->db->get()->result();
+			// order_by("id", "DESC")->	
+		
+		// dump($this->db->last_query());
 		return $this->dataPopulate($posts, $page);
 	}
 
@@ -112,16 +116,17 @@ class BlogDto extends Dto {
 		}
 
 		$pagionation = "<ul class='pagination'> ";
-		if($this->page >= 1) {
+		
+		if($this->page > 1) {
 			$pagionation .= "<li><a href='".$this->creatLink($this->page-1)."'> < </a></li>";
 		}
    		
-   		for ($i=0; $i < round($this->total/$this->ITENS_PAGE) ; $i++) { 
+   		for ($i=0; $i <= round($this->total/$this->ITENS_PAGE) ; $i++) { 
    			$current = ($i == $currentPage) ? "active" : "";
    			$pagionation .= "<li class='{$current}'><a href='".$this->creatLink($i)."'>".($i+1)."</a></li>";
    		}
 
-   		if($this->page < round($this->total/$this->ITENS_PAGE)) {
+   		if($this->page <= round($this->total/$this->ITENS_PAGE)) {
 			$pagionation .= "<li><a href='".$this->creatLink($this->page+1)."'> > </a></li>";	
    		}
 		$pagionation .= "</ul>";

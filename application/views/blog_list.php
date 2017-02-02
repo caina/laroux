@@ -6,7 +6,7 @@
 
 				<h2>
 					<a href="<?php echo $post->getLink() ?>">
-						<?php echo $post->title ?>
+						<?php echo $post->id." - ". $post->title ?>
 					</a> 
 				</h2>
 
