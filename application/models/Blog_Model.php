@@ -11,11 +11,6 @@ class Blog_Model extends CI_Model {
 		$itens_per_page = $dto->ITENS_PAGE;
 		$page = $page * $itens_per_page;
 		$posts = $this->db->query("select * from blog_post order by id DESC limit {$page}, {$itens_per_page}  ")->result();
-		// $this->db->from("blog_post");
-		// $this->db->limit(, );
-		// $posts = $this->db->get()->result();
-			// order_by("id", "DESC")->	
-		
 		// dump($this->db->last_query());
 		return $this->dataPopulate($posts, $page);
 	}
@@ -37,8 +32,9 @@ class Blog_Model extends CI_Model {
 			from("blog_post")->
 			join("blog_post_category","blog_post_category.id_blog_post = blog_post.id")->
 			join("blog_category","blog_post_category.id_blog_category = blog_category.id")->
-			where("blog_category.title like","%".str_replace(" ", "%",$categoria)."%" )->
+			where("blog_category.title like","%".str_replace("-", "%",$categoria)."%" )->
 			order_by("blog_post.id", "DESC")->get()->result();
+			//  dump($this->db->last_query());
 		return $this->dataPopulate($posts);
 	}
 
