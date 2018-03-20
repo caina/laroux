@@ -47,10 +47,10 @@
 
 $active_group = "default";
 $active_record = TRUE;
-$db['default']['hostname'] = 'mysql07-farm68.kinghost.net';
-$db['default']['username'] = 'laroux';
-$db['default']['password'] = 'm1404b79';
-$db['default']['database'] = 'laroux';
+$db['default']['hostname'] = '';
+$db['default']['username'] = '';
+$db['default']['password'] = '';
+$db['default']['database'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
